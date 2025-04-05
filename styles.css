@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    align-items: center;
+}  
+
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 1rem;
+}
+
+
+aside {
+    background-color: rgb(9, 117, 117);
+    width: 25%;
+    /*margin-left: 1rem;*/
+    
+}
+
+main {
+    background-color: lightgreen;
+    width: 75%;
+    /*margin-right: 1rem;*/
+
+}
+
+footer {
+    background-color: lightgray;
+}
+
+

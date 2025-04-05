@@ -1,0 +1,47 @@
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /*padding: 0,75rem 2rem;*/
+    
+    
+}
+
+nav > div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+nav  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.input-field {
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 70%);
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     }
+
+  .input-field > input {
+    border: none;
+    background-color: transparent;
+    margin-left: 0.5rem;
+  }
+  
+  .input-field > input:focus {
+    outline: none;
+  }
