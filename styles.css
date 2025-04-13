@@ -86,13 +86,11 @@ main {
 footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
     border-style: solid;
     border-color: red;
     justify-content: space-between;
-    justify-content: center;
+    /*justify-content: center;*/
     width: 100%;
-    /* padding: 0,75rem 2rem;*/
-    /*background-color: rgb(242, 29, 135);*/
-
 }
