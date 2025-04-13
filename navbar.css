@@ -1,5 +1,10 @@
 header {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    /*background-image: url('assets/Stockholm.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;*/
 }
 
 nav {
@@ -7,24 +12,18 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    /*padding: 0,75rem 2rem;*/
-    
-    
+    margin-bottom: 2rem;
+    padding: 0,75rem 2rem;
+    background-color: rgb(242, 29, 135);
 }
 
-nav > div {
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-}
-
-nav  ul {
+nav ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
-    
+    /*padding: 0;
+    margin: 0;*/
+
 }
 
 .input-field {
@@ -34,14 +33,35 @@ nav  ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-     }
+}
 
-  .input-field > input {
+.input-field>input {
     border: none;
     background-color: transparent;
     margin-left: 0.5rem;
-  }
-  
-  .input-field > input:focus {
+}
+
+.input-field>input:focus {
     outline: none;
-  }
+}
+
+
+
+/* Standardstorlek för större skärmar */
+h1 {
+    font-size: 3rem;
+}
+
+/*för tablets*/
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/*för mobiltelefoner*/
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}

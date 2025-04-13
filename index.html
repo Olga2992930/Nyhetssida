@@ -4,18 +4,21 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link href="link.css" rel="stylesheet" />
     <link href="navbar.css" rel="stylesheet" />
     <link href="main.css" rel="stylesheet" />
     <link href="tailwind-output.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="bg-slate-100">
     <div id="page-wrapper">
         <header>
-            <h1>Vad händer i världen...</h1>
+            <h1 class="ml-8 bg-gradient-to-r from-gray-700 to-violet-500 bg-clip-text text-3xl font-extrabold text-transparent ">
+                Vad händer i världen...
+            </h1>
             <nav>
                 <div>
-                    <ul>
+                    <ul class = "font-semibold">
                         <li>
                             <a href="#">Nyheter</a>
                         </li>
@@ -48,8 +51,64 @@
         </header>
 
         <div class="container">
-            <aside class="sidebar">Sidebar</aside>
-            <main class="huvud-area">Huvudarea</main>
+            <aside class="sidebar">
+                <h2>Aktuellt</h2>
+                <div>
+                    <ul class = "font-semibold underline underline-offset-1">
+                        <li>
+                            <a href="#">Alvar Aaltos hem kan bli världsarv</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Röhsska museet öppnar ny designutställning – en av Nordens största</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Ann-Sofie Back begraver sin egen karriär</a>
+                        </li>
+
+                        <li>
+                             <a href="#">Designmässan Formex satsar på hållbarhet: ”Finns utmaningar”</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Tog kurs i keramik – ett år senare är Emelie Mikkonen en av Sveriges hetaste formgivare</a>
+                       </li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="huvud-area">
+                <h2>Huvudnyheter</h2>
+                <article>
+                    <h3>
+                        Konsthistoriker, föreläsare, skribent + konstkonsult
+                    </h3>
+                    <img src="assets/MainNyhet1_.jpg"/>
+                    <p>
+                        Georgina Bexon är konsthistoriker, föreläsare, skribent och konstkonsult med specialisering på modern och samtida konst från Indien, Pakistan, Bangladesh och Sri Lanka
+                    </p>
+                </article>
+
+                <article>
+                    <h3>
+                        Tallkåda, citrustagg och barkborrar i överraskande hopkopplingar
+                    </h3>
+                    <img src="assets/MainNyhet2_.jpg"/>
+                    <p>
+                        Konstnärsduon Goldin+Senneby är aktuella på Accelerator med ”Flare-up”, som fokuserar på frågor om klimat, rovdrift och immunförsvar. Utställningen är elegant och behärskad, men Milou Allerholm uppfattar också vrede.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>
+                        Klimts försvunna prinsporträtt ställs ut – efter nästan 100 år
+                    </h3>
+                    <img src="assets/MainNyhet3_.jpeg"/>
+                    <p>
+                        I nästan 90 år var ett porträtt tillskrivet den österrikiske konstnären Gustav Klimt försvunnet. Konstverkets vistelseort har varit ett mysterium sedan andra världskriget – men nu har det ställts ut för första gången sedan 1928, skriver flera amerikanska medier.
+                    </p>
+                </article>
+            </main>
         </div>
 
         <footer>Footer</footer>
