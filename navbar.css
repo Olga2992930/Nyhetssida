@@ -2,9 +2,9 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*background-image: url('assets/Stockholm.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;*/
+    background-image: url('assets/Stockholm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav {
@@ -13,35 +13,22 @@ nav {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 2rem;
-    padding: 0,75rem 2rem;
-    /*background-color: rgb(242, 29, 135);*/
+    padding: 0, 75rem 2rem;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    /*padding: 0;
-    margin: 0;*/
-
 }
-
-
-
-
 
 nav ul a {
     padding: 0.1rem 0.5rem;
 }
 
-nav ul a:hover {
+/*nav ul a:hover {
     background-color: hsl(0, 0%, 90%);
-}
-
-
-
-
-
+}*/
 
 .input-field {
     background-color: white;
@@ -61,8 +48,6 @@ nav ul a:hover {
 .input-field>input:focus {
     outline: none;
 }
-
-
 
 /* Standardstorlek för större skärmar */
 h1 {
