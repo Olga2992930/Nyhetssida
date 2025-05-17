@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedArticles = JSON.parse(localStorage.getItem("articles")) || [];
     savedArticles.forEach(articleData => {
         const article = createArticleElement(articleData);
-        main.insertBefore(article, form.parentElement); // Lägg innan formuläret
+        main.insertBefore(article, form.parentElement); 
     });
 
     form.addEventListener("submit", function (e) {
@@ -50,13 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Radera";
         deleteBtn.className = "delete-button";
-        deleteBtn.style.marginTop = "10px";
-        deleteBtn.style.backgroundColor = "#d9534f";
-        deleteBtn.style.color = "white";
-        deleteBtn.style.border = "none";
-        deleteBtn.style.padding = "5px 10px";
-        deleteBtn.style.cursor = "pointer";
-        deleteBtn.style.borderRadius = "4px";
 
         deleteBtn.addEventListener("click", () => {
             article.remove();
@@ -95,11 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
         toast.textContent = message;
 
         if (type === 'success') {
-            toast.style.backgroundColor = '#4CAF50'; 
+            toast.style.backgroundColor = '#6b7280'; 
         } else if (type === 'error') {
-            toast.style.backgroundColor = '#f44336'; 
+            toast.style.backgroundColor = '#4b5563'; 
         } else {
-            toast.style.backgroundColor = '#333'; 
+            toast.style.backgroundColor = '#4b5563'; 
         }
 
         toast.classList.add('show');
@@ -108,3 +101,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 });
+
