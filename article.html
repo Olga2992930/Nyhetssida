@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artikel</title>
-  <link rel="stylesheet" href="styles.css" />
-    <script src="article.js" type="module"></script>
+  <link rel="stylesheet" href="styles.css">
+   <script src="article.js"></script>
 </head>
 <body>
   <div id="page-wrapper">
+    <header>
+      <h1>Artikel</h1>
+    </header>
+
     <main>
       <section id="article-container"></section>
+      <section id="likes-dislikes" class="likes-dislikes">
+        <button id="likeBtn">👍 Gilla (<span id="likeCount">0</span>)</button>
+        <button id="dislikeBtn">👎 Ogilla (<span id="dislikeCount">0</span>)</button>
+      </section>
 
       <section class="comments-section">
-        <h3>Kommentarer</h3>
+        <h2>Kommentarer</h2>
         <form id="commentForm">
-          <textarea id="commentInput" placeholder="Skriv en kommentar..." required></textarea>
-          <button type="submit">Skicka kommentar</button>
+          <textarea id="commentInput" rows="3" placeholder="Skriv en kommentar..." required></textarea>
+          <button type="submit">Skicka</button>
         </form>
         <ul id="commentList"></ul>
       </section>
@@ -24,3 +32,4 @@
   </div>
 </body>
 </html>
+

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   articleContainer.appendChild(article);
 
-  // Hantera kommentarer
+  // kommentarer
   const commentForm = document.getElementById("commentForm");
   const commentInput = document.getElementById("commentInput");
   const commentList = document.getElementById("commentList");
@@ -61,6 +61,33 @@ document.addEventListener("DOMContentLoaded", () => {
     renderComments();
     commentInput.value = "";
   });
-
   renderComments();
+
+ // gilla/ogilla
+  const likeBtn = document.getElementById("likeBtn");
+  const dislikeBtn = document.getElementById("dislikeBtn");
+  const likeCountSpan = document.getElementById("likeCount");
+  const dislikeCountSpan = document.getElementById("dislikeCount");
+
+  const voteKey = `votes-${selectedArticle.title}-${selectedArticle.date}`;
+  let voteData = JSON.parse(localStorage.getItem(voteKey)) || { likes: 0, dislikes: 0 };
+
+  function renderVotes() {
+    likeCountSpan.textContent = voteData.likes;
+    dislikeCountSpan.textContent = voteData.dislikes;
+  }
+
+  likeBtn.addEventListener("click", () => {
+    voteData.likes++;
+    localStorage.setItem(voteKey, JSON.stringify(voteData));
+    renderVotes();
+  });
+
+  dislikeBtn.addEventListener("click", () => {
+    voteData.dislikes++;
+    localStorage.setItem(voteKey, JSON.stringify(voteData));
+    renderVotes();
+  });
+  renderVotes();
+
 });
