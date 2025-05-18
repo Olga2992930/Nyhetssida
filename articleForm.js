@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
         deleteBtn.textContent = "Radera";
         deleteBtn.className = "delete-button";
 
-        deleteBtn.addEventListener("click", () => {
+        deleteBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
             article.remove();
 
             let articles = JSON.parse(localStorage.getItem("articles")) || [];
@@ -79,6 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         article.appendChild(p);
         article.appendChild(deleteBtn);
+
+        article.addEventListener("click", () => {
+            localStorage.setItem("selectedArticle", JSON.stringify(data));
+            window.location.href = "article.html";
+        });
 
         return article;
     }

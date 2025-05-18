@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Artikel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="article-container" class="container" style="flex-direction: column; align-items: start;"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const article = JSON.parse(localStorage.getItem("selectedArticle"));
+
+            if (!article) {
+                document.getElementById("article-container").innerHTML = "<p>Ingen artikel att visa.</p>";
+                return;
+            }
+
+            const container = document.getElementById("article-container");
+
+            const h1 = document.createElement("h1");
+            h1.textContent = article.title;
+
+            const date = document.createElement("p");
+            date.textContent = `Publicerad: ${article.date}`;
+            date.className = "article-date";
+
+            container.appendChild(h1);
+            container.appendChild(date);
+
+            if (article.imageUrl) {
+                const img = document.createElement("img");
+                img.src = article.imageUrl;
+                img.style.maxWidth = "100%";
+                img.style.margin = "1rem 0";
+                container.appendChild(img);
+            }
+
+            const content = document.createElement("p");
+            content.textContent = article.content;
+
+            container.appendChild(content);
+        });
+    </script>
+</body>
+</html>
