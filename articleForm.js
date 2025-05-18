@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         deleteBtn.className = "delete-button";
 
         deleteBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
+            e.stopPropagation(); 
             article.remove();
 
             let articles = JSON.parse(localStorage.getItem("articles")) || [];
@@ -76,11 +76,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const p = document.createElement("p");
-        p.textContent = data.content;
+
+        // endast första 60 tecknen
+        if (data.content.length > 60) {
+            p.textContent = data.content.substring(0, 60) + "…";
+        } else {
+            p.textContent = data.content;
+        }
 
         article.appendChild(p);
         article.appendChild(deleteBtn);
 
+        // hela artikeln i ny sida
         article.addEventListener("click", () => {
             localStorage.setItem("selectedArticle", JSON.stringify(data));
             window.location.href = "article.html";
@@ -107,4 +114,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 });
-
